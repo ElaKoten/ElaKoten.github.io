@@ -1,2 +1,2 @@
 # elakoten.github.io
-<h6>heading is here, here is heading</h6>
+<h1>heading is here, here is heading</h1>
