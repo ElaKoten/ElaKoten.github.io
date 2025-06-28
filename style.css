@@ -1,0 +1,29 @@
+/*
+  This file contains custom CSS, if any, beyond what Tailwind provides.
+  For this application, most styling is handled directly with Tailwind classes
+  in the HTML. This CSS primarily ensures the 'Inter' font is used and
+  provides a consistent background.
+*/
+
+/* Import the Inter and Dancing Script fonts from Google Fonts */
+@import url('[https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap)');
+
+/* Apply Inter font to the body, falling back to sans-serif */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom class for the Dancing Script font */
+.font-dancing-script {
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Ensure the main container is centered and takes full width on small screens */
+@media (max-width: 640px) {
+    .max-w-md {
+        max-width: 100%;
+    }
+    .p-8 {
+        padding: 1rem; /* Adjust padding for smaller screens for better fit */
+    }
+}
