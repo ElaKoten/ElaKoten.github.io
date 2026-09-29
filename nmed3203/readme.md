@@ -1,1 +1,3 @@
-Ela Köten, a New media and communications, 3rd year student....I LOVE ORBIT CULTURE
+# Ela Köten
+## A New media and communications, 3rd year student....
+# I LOVE ORBIT CULTURE
