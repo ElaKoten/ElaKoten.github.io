@@ -1,10 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetic Polarity - Reciprocity Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
+    <main class="container">
+        <header>
+            <h1>Magnetic Polarity</h1>
+            <p class="subtitle">Exploring Reciprocity: Every action expects a response.</p>
+        </header>
 
-<h1>Oh hiiii</h1>
+        <div class="workspace">
+            <div class="canvas-container">
+                <canvas id="fieldCanvas" width="600" height="400" aria-label="Interactive magnetic field canvas representing participant and system nodes" tabindex="0"></canvas>
+            </div>
 
-<p>How's it goiiinnngggg</p>
+            <aside class="controls-panel">
+                <div class="status-box">
+                    <h2>Dialogue State</h2>
+                    <p id="statusText" aria-live="polite">Status: Attracted</p>
+                    <p id="hintText" class="hint">Move smoothly to attract, or shake rapidly to trigger system resistance.</p>
+                </div>
 
+                <div class="button-group">
+                    <button id="pulseBtn" class="btn" aria-label="Emit polarity pulse">Pulse Charge (Space)</button>
+                    <button id="modeBtn" class="btn" aria-label="Toggle mode">Mode: Dynamic Memory</button>
+                    <button id="resetBtn" class="btn secondary" aria-label="Reset simulation">Reset</button>
+                </div>
+
+                <div class="instructions-card">
+                    <h3>Controls</h3>
+                    <ul>
+                        <li><strong>Mouse/Touch:</strong> Click and drag inside the field to move your node.</li>
+                        <li><strong>Keyboard:</strong> Use Arrow Keys or WASD to move, Spacebar to pulse.</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
