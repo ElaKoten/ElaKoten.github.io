@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Chroma Echoes - Temporality Experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="stage-container">
+        <canvas id="liquidCanvas" aria-label="Interactive canvas exploring fluid temporality with stationary asymptotic residue"></canvas>
+        
+        <div class="hud" aria-live="polite">
+            <div class="hud-item">
+                <span class="label">Active Echoes:</span>
+                <span id="activeCount">0</span>
+            </div>
+            <div class="hud-item">
+                <span class="label">Residue Memory:</span>
+                <span id="residueCount">0</span>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <p>Click anywhere or press <strong>Spacebar</strong> to release a liquid chroma pulse. Faded residue remains permanently locked in place.</p>
+            <button id="resetBtn" type="button">Reset Canvas</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
