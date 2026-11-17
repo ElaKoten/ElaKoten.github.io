@@ -1,85 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Decay (Temporality x Feedback)</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- Fullscreen Start Overlay for browser WebAudio compliance -->
-  <div id="audio-overlay">
-    <h2>Decay</h2>
-    <p style="margin-top: 8px; color: #888;">Temporality × Feedback</p>
-    <button id="start-btn" type="button">Click Anywhere to Begin</button>
-  </div>
-
-  <div id="canvas-container">
-    <canvas id="main-canvas"></canvas>
-  </div>
-
-  <header class="ui-layer">
-    <h1>Decay</h1>
-    <div class="subtitle">Premises: Temporality × Feedback</div>
-  </header>
-
-  <!-- Live Control Parameters Panel -->
-  <aside class="control-panel ui-layer">
-    <div class="panel-title">System Parameters</div>
-    
-    <div class="control-group">
-      <div class="label-row">
-        <span>Temporality: Decay Speed</span>
-        <span id="decay-val">0.005</span>
-      </div>
-      <input type="range" id="knob-decay" min="0.001" max="0.02" step="0.001" value="0.005">
-    </div>
-
-    <div class="control-group">
-      <div class="label-row">
-        <span>Feedback: Max Blur Radius</span>
-        <span id="blur-val">12px</span>
-      </div>
-      <input type="range" id="knob-blur" min="0" max="25" step="1" value="12">
-    </div>
-
-    <div class="control-group">
-      <div class="label-row">
-        <span>Harmonic Strands</span>
-        <span id="freq-val">12</span>
-      </div>
-      <input type="range" id="knob-freq" min="3" max="24" step="1" value="12">
-    </div>
-
-    <div class="control-group">
-      <div class="label-row">
-        <span>Base Pitch Frequency</span>
-        <span id="pitch-val">180 Hz</span>
-      </div>
-      <input type="range" id="knob-pitch" min="100" max="440" step="10" value="180">
-    </div>
-
-    <button id="reset-btn" type="button">Reset Canvas</button>
-  </aside>
-
-  <!-- Alternative Keyboard Inputs (Accessibility Requirement) -->
-  <div class="keyboard-bar ui-layer">
-    <div class="key-btn" data-key="a">A</div>
-    <div class="key-btn" data-key="s">S</div>
-    <div class="key-btn" data-key="d">D</div>
-    <div class="key-btn" data-key="f">F</div>
-    <div class="key-btn" data-key="g">G</div>
-    <div class="key-btn" data-key="h">H</div>
-    <div class="key-btn" data-key="j">J</div>
-    <div class="key-btn" data-key="k">K</div>
-  </div>
-
-  <div class="info-footer ui-layer">
-    Click canvas or press [A-K] to trigger wave spikes.<br>
-    Spikes fade over time; older traces leave smudged feedback trails.
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>The Little Forest Keeper — Owl Forest</title>
+<link rel="stylesheet" href="style.css"></head>
+<body><div id="wrap"><div id="gamebox"><canvas id="game" width="1200" height="800" aria-label="The Little Forest Keeper game"></canvas>
+<div class="hud"><div class="top"><div><div class="brand">OWL FOREST</div><div class="tag">The little forest keeper</div></div><div class="progress"><div class="stats"><span>Forest restored</span><b id="count">0 / 22</b></div><div class="progressline"><div class="bar" id="bar"></div></div><div class="stats" style="margin-top:6px"><span>Seeds</span><b id="seeds">0</b></div></div></div><div class="bottom"><div class="message" id="message">The forest is waiting. Collect a glowing seed to begin.</div><div class="keys">WASD / arrows · move<br>E · collect / help / plant<br>SPACE · call the Night Cat</div></div></div>
+<div class="interact" id="interact">E · interact</div>
+<div class="dpad" id="dpad"><button data-key="ArrowUp">↑</button><button data-key="ArrowLeft">←</button><button data-key="ArrowDown">↓</button><button data-key="ArrowRight">→</button></div>
+<div class="mobile-controls"><button id="call" aria-label="Call cat">♡</button><button id="action" aria-label="Interact">E</button></div>
+<div class="overlay" id="intro"><div class="panel"><div class="eyebrow">A cozy little forest adventure</div><h1>The Little<br>Forest Keeper</h1><p>The Owl Forest has grown dim. The lanterns have gone out, the flower beds are empty, and the trees need a little care. With the Night Cat beside you, bring the forest back to life one small task at a time.</p><div class="tasks"><div class="task">✦ <b>10</b> glowing seeds</div><div class="task">☼ <b>4</b> lanterns to light</div><div class="task">❀ <b>5</b> flowers to plant</div><div class="task">♧ <b>3</b> trees to mend</div></div><button id="start">Begin your little adventure</button><p class="small">Move with WASD / arrow keys · E to interact · Space to call your friend</p></div></div>
+<div class="overlay" id="ending" style="display:none"><div class="panel"><div class="eyebrow">A forest made brighter together</div><h1>Well done,<br>little keeper.</h1><p>You gathered the seeds, lit every lantern, planted a garden and cared for the old trees. The Night Cat curls beside you beneath the central lamp. The forest is alive again.</p><p id="finaltime" class="small"></p><button id="again">Play again</button></div></div>
+</div></div>
+<script src="script.js" defer></script></body></html>
